@@ -1,0 +1,38 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card-area {
+    margin-top: 20px;
+}
+
+.game-card {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.black-card {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.white-card {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#white-cards-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 2rem;
+}
+
+.card {
+    display: flex;
+    justify-self: center;
+    width: 18rem;
+}
