@@ -1,4 +1,5 @@
 const StatusAction = {
-    ENABLE: 'enable',
-    DISABLE: 'disable'
+    SELECTED: 'selected',
+    DISABLED: 'disabled',
+    ENABLED: 'enabled',
 };

@@ -32,6 +32,7 @@ body {
 }
 
 .card {
+    cursor: pointer;
     display: flex;
     justify-self: center;
     width: 18rem;
