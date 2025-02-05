@@ -176,13 +176,15 @@ async function submitAnswer(submitButton) {
 
 function getSelectedCardsInfo() {
     const allCards = document.getElementsByClassName('card');
+    let response = '';
     Array.from(allCards).forEach(card => {
-        if (currentMaxSpaces === 1) { // dc. e runda cu un singur spatiu
-            if (card.classList.contains(StatusAction.SELECTED)) {
-                alert(card.firstElementChild.firstElementChild.innerText);
+        if (card.classList.contains(StatusAction.SELECTED)) { // dc. e card marcat ca selectat
+            if (currentMaxSpaces === 1) { // dc. e runda cu un singur spatiu
+                response = card.firstElementChild.firstElementChild.innerText
+            } else { //runda cu 2 spatii => ne intereseaza id-ul propozitiei si index-ul
+                response += card.dataset.indexSentence + " " + card.firstElementChild.firstElementChild.innerText + "\n";
             }
-        } else { //runda cu 2 spatii => ne intereseaza id-ul propozitiei si index-ul
-
         }
-    })
+    });
+    alert(response);
 }
